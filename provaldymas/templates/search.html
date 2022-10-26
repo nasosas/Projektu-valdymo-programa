@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Search "{{query}}" results:</h1>
+  </br>
+  {% if projects %}
+  <ul>
+    {% for project in projects %}
+      <li>
+        <a href="{%url 'project' project.id %}">{{ project.name }}</a> ({{project.client}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>No results</p>
+  {% endif %}
+
+  {% endblock %}

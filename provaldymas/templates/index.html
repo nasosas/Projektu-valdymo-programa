@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Project Manager 1.0</h2>
+  <h6>Welcome!</h6>
+  <hr/>
+  <ul>
+    <li><strong>Projects in progress:</strong> {{ num_projects }}</li>
+    <li><strong>Employees assigned work:</strong> {{ num_employees }}</li>
+    <li><strong>Clients:</strong> {{ num_clients }}</li>
+  </ul>
+{% endblock %}

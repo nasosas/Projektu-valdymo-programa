@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container project">
+    <h4>Project name: {{ project.name }}</h4>
+    <hr/>
+        </hr>
+    <img src="{{ project.cover.url }}" style="width:500px" class="card-img-top" alt="...">
+    <h4>Description: {{ project.description | safe }}</h4>
+        </br>
+    <h5>Work began: {{ project.start_date }}</h5>
+    <h5>Work end/ended: {{ project.end_date }}</h5>
+        </br>
+    <h5>Client: {{ project.client.company }}</h5>
+        </br>
+    <h5>Project manager: {{ project.user }}</h5>
+        </br>
+    <h5>Employees: {{ project.employees }}</h5>
+    <h5>Project price: {{ project.invoice.sum }}</h5>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container client">
+        <img src="{{ client.logo.url }}" style="width:100px" class="card-img-top" alt="...">
+    <h2>{{ client.company }}</h2>
+    <hr/>
+    </hr>
+    <h5>Name: <b>{{ client.f_name }}</b></h5>
+    <h5>Surname: <b>{{ client.l_name }}</b></h5>
+    <h4>Contacts: <b>{{ client.contacts }}</b></h4>
+    </div>
+{% endblock %}
